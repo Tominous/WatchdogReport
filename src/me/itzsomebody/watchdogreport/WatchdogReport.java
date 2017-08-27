@@ -21,8 +21,8 @@ public class WatchdogReport extends JavaPlugin {
 	
 	public void checkAACVersion() {
 		String AACVersion = Bukkit.getServer().getPluginManager().getPlugin("AAC").getDescription().getVersion();
-		if (AACVersion != "1.9.10") {
-			getLogger().info("Please use the correct version of AAC (1.9.10)");
+		if (!AACVersion.equalsIgnoreCase("1.9.10") && !AACVersion.equalsIgnoreCase("2.0.0") && !AACVersion.equalsIgnoreCase("2.1.1")) {
+			getLogger().info("Please use the correct version of AAC (1.9.10 | 2.0.0 | 2.1.1)");
 			getServer().getPluginManager().disablePlugin(this);
 		}
 	}
