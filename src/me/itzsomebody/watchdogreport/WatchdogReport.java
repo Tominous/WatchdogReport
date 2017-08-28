@@ -15,12 +15,12 @@ public class WatchdogReport extends JavaPlugin {
 
 	public void onEnable() {
 		getLogger().info("WDR has been enabled.");
-		checkWatchdogVersion();
+		checkAACVersion();
 		this.getCommand("watchdogreport").setExecutor(new WatchdogReportCMD());
 		createConfigs();
 	}
 	
-	public void checkWatchdogVersion() {
+	public void checkAACVersion() {
 		String Watchdog = Bukkit.getServer().getPluginManager().getPlugin("AAC").getDescription().getVersion();
 		if (Watchdog != "3.3.1") {
 			getLogger().info("Please use the correct version of AAC (3.3.1)");
