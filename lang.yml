@@ -24,6 +24,7 @@ playerLoggedOut1: "&cYour report against &e%player%&c has been closed, but I'll 
 playerLoggedOut2: "&c&lThe player logged out before we could finish analyzing them! Be sure to open a report at our website."
 thankPlayerForReport: "&aThanks for your report! Watchdog or a staff member will respond to it as soon as possible."
 alreadyReported: "&cYou already have an open report against &e%player%"
+notEnoughEvidence: "&c&lI couldn't find enough evidence, please open a report at our website!"
 
 # /wdr <player> <one hack> section
 successfulReportOneHack: "&aYou reported &e%player% &afor &e[%hack%]"

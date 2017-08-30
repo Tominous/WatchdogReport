@@ -368,8 +368,8 @@ public class WatchdogReportCMD implements CommandExecutor {
 	}
 
     public void yourReportGotNinjad(CommandSender sender, String playerName) {
-    	sender.sendMessage(plugin.getLangConfig().getString("prefix").replace("&", "§") + "§cYour report against §e" + playerName + "§c has been closed, but I'll keep watching them!");
-        sender.sendMessage("§c§lI couldn't find enough evidence, please open a report at our website!" );
+    	sender.sendMessage(plugin.getLangConfig().getString("prefix").replace("&", "§") + plugin.getLangConfig().getString("playerLoggedOut1").replace("&", "§").replace("%player%", playerName));
+        sender.sendMessage(plugin.getLangConfig().getString("notEnoughEvidence").replace("&", "§"));
     }
     
     public String getProperNaming(String hackReported) {
