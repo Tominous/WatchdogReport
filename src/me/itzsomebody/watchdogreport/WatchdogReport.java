@@ -1,7 +1,6 @@
 package me.itzsomebody.watchdogreport;
 
 import java.io.File;
-import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -15,17 +14,8 @@ public class WatchdogReport extends JavaPlugin {
 
 	public void onEnable() {
 		getLogger().info("WDR has been enabled.");
-		checkAACVersion();
 		this.getCommand("watchdogreport").setExecutor(new WatchdogReportCMD());
 		createConfigs();
-	}
-	
-	public void checkAACVersion() {
-		String Watchdog = Bukkit.getServer().getPluginManager().getPlugin("AAC").getDescription().getVersion();
-		if (Watchdog != "3.3.1") {
-			getLogger().info("Please use the correct version of AAC (3.3.1)");
-			getServer().getPluginManager().disablePlugin(this);
-		}
 	}
 	
 	public FileConfiguration getLangConfig() {
