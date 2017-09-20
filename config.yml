@@ -19,6 +19,10 @@ banOnVL:
   Speed: 250
   Reach: 25
 
+# Custom report command :D
+# Make sure you leave the preceding slash off
+customReportCommand: "report"
+
 # If a player has a higher ping than this don't ban them
 maximumPing: 200
 
